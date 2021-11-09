@@ -62,7 +62,7 @@ client.on("ready",()=>{
   hora.setHours(hora.getHours() - 3);
 const channel = client.channels.cache.find(channel => channel.id === '859079092396490802');
 //const channel2 = client.channels.cache.find(channel => channel.id === '885861586923831326');
-//channel2.send({embed:{color:'RED', description:`Cronograma de Aulas Sincronas - módulo 2 <a:verify:859533310891786270>`,image:{url:'https://imgur.com/CePbSU2.png'},timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
+//channel2.send({embed:{color:'RED',image:{url:'https://imgur.com/q8zi2ln.png'},fields:[{name:'Cronograma de Aulas Sincronas - módulo 3 <a:verify:859533310891786270>',value:'📌Atualizado conforme o site da [DIATINF](https://sites.google.com/escolar.ifrn.edu.br/diatinf/)'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
   avatar='https://imgur.com/DoOJTbN'
 channel.send({embed:{color:'YELLOW',author:{name:'BOT INFOWEB20'},description:`ONLINE! <a:verify:859533310891786270>`,thumbnail:{url:'https://imgur.com/Ynmq2tq.png'},fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/anjosoff) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
     msg.delete({ timeout: 43200000})});

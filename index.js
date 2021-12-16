@@ -31,7 +31,7 @@ try {
 } catch (err) {
   message.delete();
   comandoerr="`"+String(message)+"`"
-  message.channel.send({embed:{color:'RED',author:{name:`Não consegui identificar o comando!`},thumbnail:{url:'https://imgur.com/Ax5OVR1.png'},description:`${comandoerr} não existe`+'\n> Veja todos os meus comandos em `zap!help` ',fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/anjosoff) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
+  message.channel.send({embed:{color:'RED',author:{name:`Não consegui identificar o comando!`},thumbnail:{url:'https://imgur.com/Ax5OVR1.png'},description:`${comandoerr} não existe`+'\n> Veja todos os meus comandos em `zap!help` ',fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
     msg.delete({ timeout: 30000/*time unitl delete in milliseconds*/})
   });
   
@@ -43,7 +43,7 @@ client.on("message",message=>{
   
   avatar='https://imgur.com/DoOJTbN'
   if(message.content=='zap!comandos'){
-    message.channel.send({embed:{color:'RED',description:'O COMANDO FOI RENOMEADO PARA `zap!help`',thumbnail:{url:'https://imgur.com/Ax5OVR1.png'},fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/anjosoff) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
+    message.channel.send({embed:{color:'RED',description:'O COMANDO FOI RENOMEADO PARA `zap!help`',thumbnail:{url:'https://imgur.com/Ax5OVR1.png'},fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
     msg.delete({ timeout: 14400000})});
     
   }
@@ -54,17 +54,16 @@ client.on("message",message=>{
 });
 
 
-
-
 client.on("ready",()=>{
 
   const hora = new Date();
   hora.setHours(hora.getHours() - 3);
 const channel = client.channels.cache.find(channel => channel.id === '859079092396490802');
-//const channel2 = client.channels.cache.find(channel => channel.id === '885861586923831326');
-//channel2.send({embed:{color:'RED',image:{url:'https://imgur.com/q8zi2ln.png'},fields:[{name:'Cronograma de Aulas Sincronas - módulo 3 <a:verify:859533310891786270>',value:'📌Atualizado conforme o site da [DIATINF](https://sites.google.com/escolar.ifrn.edu.br/diatinf/)'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
+const channel2 = client.channels.cache.find(channel => channel.id === '885861586923831326');
+//channel2.send({embed:{color:'GREEN',description:'**LUIGIZAP INFOWEB BOT - REPOSITÓRIO**\n No github você poderá acompanhar os updates (commits)\n [Clique aqui para ir ao repositório no Github](https://github.com/anjosoff/infoweb-botDC)',fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
+//channel2.send({embed:{color:'RED',image:{url:'https://imgur.com/lnSpN3P.png'},fields:[{name:'Cronograma de Aulas Sincronas - módulo 3 (atualizado com as aulas presenciais) <a:verify:859533310891786270>',value:'📌Atualizado conforme o site da [DIATINF](https://sites.google.com/escolar.ifrn.edu.br/diatinf/)'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
   avatar='https://imgur.com/DoOJTbN'
-channel.send({embed:{color:'YELLOW',author:{name:'BOT INFOWEB20'},description:`ONLINE! <a:verify:859533310891786270>`,thumbnail:{url:'https://imgur.com/Ynmq2tq.png'},fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/anjosoff) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
+channel.send({embed:{color:'YELLOW',author:{name:'BOT INFOWEB20'},description:`ONLINE! <a:verify:859533310891786270>`,thumbnail:{url:'https://imgur.com/Ynmq2tq.png'},fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
     msg.delete({ timeout: 43200000})});
   //status de atividade do bot
   let activities=[

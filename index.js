@@ -59,9 +59,9 @@ client.on("ready",()=>{
   const hora = new Date();
   hora.setHours(hora.getHours() - 3);
 const channel = client.channels.cache.find(channel => channel.id === '859079092396490802');
-const channel2 = client.channels.cache.find(channel => channel.id === '885861586923831326');
+const channel2 = client.channels.cache.find(channel => channel.id === '885861511602503680'); //id canal de avisos
 //channel2.send({embed:{color:'GREEN',description:'**LUIGIZAP INFOWEB BOT - REPOSITÓRIO**\n No github você poderá acompanhar os updates (commits)\n [Clique aqui para ir ao repositório no Github](https://github.com/anjosoff/infoweb-botDC)',fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
-//channel2.send({embed:{color:'RED',image:{url:'https://imgur.com/lnSpN3P.png'},fields:[{name:'Cronograma de Aulas Sincronas - módulo 3 (atualizado com as aulas presenciais) <a:verify:859533310891786270>',value:'📌Atualizado conforme o site da [DIATINF](https://sites.google.com/escolar.ifrn.edu.br/diatinf/)'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
+//channel2.send({embed:{color:'YELLOW',image:{url:'https://imgur.com/gJBr4P5.png'},fields:[{name:'Orientações para aula de Educação Física presencial <a:verify:859533310891786270>',value:'📌Atualizado conforme o post no [CLASSROOM](https://classroom.google.com/u/3/c/NDI1NzM5Mjg5NjI4/m/NDYwMDg3OTk1MTAy/details)'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}});
   avatar='https://imgur.com/DoOJTbN'
 channel.send({embed:{color:'YELLOW',author:{name:'BOT INFOWEB20'},description:`ONLINE! <a:verify:859533310891786270>`,thumbnail:{url:'https://imgur.com/Ynmq2tq.png'},fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
     msg.delete({ timeout: 43200000})});

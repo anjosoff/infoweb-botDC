@@ -3,8 +3,6 @@
 # LUIGIZAP  
 > Um bot feito para o servidor do discord de Infoweb20;
 
-
-
 ## 🛠 | Comandos (zap!)
 ### 👥 | Para todos os usuários
 >

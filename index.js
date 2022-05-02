@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
-app.get("/", (request, response) => {
+app.get("/", (request, response) => { 
   //iniciando o bot
   const ping = new Date();
-  
   ping.setHours(ping.getHours() - 3);
-  console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+  console.log(`LOG:Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+  response.send("LOG:INFOWEB SERVER PAGE");
   response.sendStatus(200);
+  
 });
-app.listen(process.env.PORT); // Recebe solicitações que o deixa online
+app.listen(process.env.PORT,()=>{
+  console.log("LOG:Conectado com o servidor. ESTAMOS ONLINE!");
+}); // Recebe solicitações que o deixa online
 
 const Discord = require("discord.js"); //Conexão com a livraria Discord.js
 const client = new Discord.Client(); //Criação de um novo Client
@@ -31,11 +34,23 @@ try {
 } catch (err) {
   message.delete();
   comandoerr="`"+String(message)+"`"
-  message.channel.send({embed:{color:'RED',author:{name:`Não consegui identificar o comando!`},thumbnail:{url:'https://imgur.com/Ax5OVR1.png'},description:`${comandoerr} não existe`+'\n> Veja todos os meus comandos em `zap!help` ',fields:[{name:'About developer',value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],timestamp: new Date(),footer:{text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
+  message.channel.send({
+    embed:
+    {color:'RED',
+     author:
+     {name:`Não consegui identificar o comando!`},
+     thumbnail:{url:'https://imgur.com/Ax5OVR1.png'},
+     description:`${comandoerr} não existe`+'\n> Veja todos os meus comandos em `zap!help` ',
+     fields:[{
+       name:'About developer',
+        value:'《 [Instagram](https://instagram.com/idk_anjos) 》  《 [Github](https://github.com/anjosoff) 》'}],
+     timestamp: new Date(),
+     footer:{
+       text:`Duvidas? zap!help | developed by @anjosoff`}}}).then(msg => {
     msg.delete({ timeout: 30000/*time unitl delete in milliseconds*/})
   });
   
-  console.error(err);
+  console.error("LOG:\n"+err);
 }
 });
 avatar='https://imgur.com/DoOJTbN'
@@ -49,7 +64,7 @@ client.on("message",message=>{
   }
   if(message.content=='fuderoso'){
      message.channel.send({files:["./data/fuderoso.jpg"]});
-     console.log(`Comamand required for ${message.author.username}`);
+     console.log(`LOG: Comando solicitado por ${message.author.username}`);
   }
 });
 
@@ -88,7 +103,7 @@ channel.send({embed:{color:'YELLOW',author:{name:'BOT INFOWEB20'},description:`O
   
   }),10000);
   
-  console.log("LOG:INFOWEBZAPAP ONLINE");
+  console.log("LOG:Online!");
 });
 
 client.login(process.env.TOKEN); //Ligando o Bot caso ele consiga acessar o token'
